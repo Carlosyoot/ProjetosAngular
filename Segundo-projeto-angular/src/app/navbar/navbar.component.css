@@ -1,0 +1,133 @@
+.sidebar {
+    background: #263238;
+    transition: all 0.3s ease-in-out;
+    position: fixed;
+    z-index: 3;
+    top: 0;
+    width: 5rem; /* Sidebar colapsada */
+    height: 100vh;
+}
+
+.sidebar-collapsed {
+    width: 16rem; /* Sidebar expandida */
+}
+
+/* Mantenha os itens fixos com flexbox */
+.sidebar-nav {
+    list-style: none;
+    padding: 0.9rem;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Alinha os itens à esquerda */
+    height: 100%; /* Garantir que o layout ocupe toda a altura da sidebar */
+    }
+
+.sidebar-nav-Item {
+    width: 100%;
+    margin-bottom: 0.65rem;
+}
+
+
+.sidebar-nav-Item:hover .sidebar-nav-link{
+    background-color: #1d2325;
+}
+
+
+.sidebar-nav-link {
+    display: flex;
+    align-items: center;
+    height: 3rem;
+    border-radius: 0.6rem;
+    color: #f3f3f3;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    width: 100%; /* Garante que o link ocupe a largura inteira da sidebar */
+}
+
+.sidebar-link-icon {
+    font-size: 22px;
+    width: 2rem;
+    min-width: 2rem;
+    margin: 0 0.5rem;
+    text-align: center;
+}
+
+.sidebar-link-text{
+    margin-left: 1.5rem;
+}
+
+/* Ajuste para a logo quando colapsada */
+.logo-container {
+    background-color: #1d2325;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Para garantir que o logo e o texto fiquem alinhados */
+    width: 100%;
+    height: 3.313rem;
+}
+
+.logo-img {
+    text-align: center;
+    width: 3rem;
+    min-width: 3rem;
+    border-radius: 0.3rem;
+    padding: 0.3rem;
+    margin-left: 10px;
+    cursor: pointer;
+    font-size: 24px;
+    font-weight: 900;
+    border: none;
+    transition: transform 200ms ease-in-out; /* Transição sempre ativa */
+
+}
+
+.logo-text {
+    margin-left: 2rem;
+    font-size: 24px;
+    font-weight: 700;
+    color: #ffff;
+}
+
+.custom-svg {
+    width: 40px; /* Define o tamanho do SVG */
+    height: 40px;
+    fill: currentColor; /* Herda a cor do elemento pai */
+    transition: transform 0.3s ease-in-out; /* Adiciona uma transição suave */
+}
+
+    .rotate-icon {
+        transform: rotate(90deg); /* Rotaciona o ícone em 180 graus */
+        transition: 200ms;
+
+    }
+
+    .navbar {
+        position: fixed; /* Fixa a navbar no topo */
+        top: 0;
+        left: 0;
+        right: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: transparent;
+        padding: 0.5rem 1rem; /* Espaçamento interno */
+        z-index: 2; /* Garante que a navbar fique acima de outros elementos */
+        height: 60px; /* Defina uma altura fixa para a navbar */
+    }
+    
+    .navbar-icons {
+        display: flex;
+        align-items: center;
+    }
+    
+    .navbar-icon {
+        width: 64px; /* Tamanho do ícone */
+        height: 64px;
+        border-radius: 50%; /* Ícone redondo */
+        transition: transform 0.3s ease; /* Animação ao passar o mouse */
+    }
+    
+    .navbar-icon:hover {
+        transform: scale(1.1); /* Efeito de zoom ao passar o mouse */
+    }
